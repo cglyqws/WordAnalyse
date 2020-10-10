@@ -122,14 +122,14 @@ int main (int argc, char *argv[])
 		
 	while  (fgets(stmp,500,in))
 	{
+		printf("%s\n",stmp);
 //		flag = analyse(stmp);
-//		printf("%d\n",flag);
-		printf("%s",stmp);
-		if (flag)
-		{
-			memset(stmp, 0, size);
-		}
-		else break;		
+
+//		if (flag)
+//		{
+//			memset(stmp, 0, size);
+//		}
+//		else break;		
 	}
 	
 }
