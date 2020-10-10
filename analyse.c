@@ -113,9 +113,9 @@ int analyse (char *s)
 	return 1;
 }
 int flag;
-int main (char *argv[])
+int main (int argc, char *argv[])
 {
-	FILE *in = fopen(argv[0],"rt");
+	FILE *in = fopen(argv[1],"rt");
 	fgets(stmp,500,in);
 	int size = sizeof(stmp) ;
 		
@@ -128,8 +128,7 @@ int main (char *argv[])
 			memset(stmp, 0, size);
 			fgets(stmp,500,in);
 		}
-		else break;
-		
+		else break;		
 	}
 	
 }
