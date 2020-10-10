@@ -1,5 +1,5 @@
-FROM openjdk:8
+FROM gcc:10
 WORKDIR /app/
-COPY ./* ./app/
-RUN javac -d ./output ./WordAnalyse/src/MyClass.java
-WORKDIR /app/output
+COPY ./* ./
+RUN gcc analyse.c -o program
+RUN chmod +x program
