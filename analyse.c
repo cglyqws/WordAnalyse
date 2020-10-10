@@ -113,9 +113,9 @@ int analyse (char *s)
 	return 1;
 }
 int flag;
-int main ()
+int main (char *argv[])
 {
-	FILE *in = fopen("my-pascal-lexer","rt");
+	FILE *in = fopen(argv[0],"rt");
 	fgets(stmp,500,in);
 	int size = sizeof(stmp) ;
 		
@@ -131,4 +131,5 @@ int main ()
 		else break;
 		
 	}
+	
 }
