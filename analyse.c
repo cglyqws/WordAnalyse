@@ -117,17 +117,16 @@ int flag;
 int main (int argc, char *argv[])
 {
 	FILE *in = fopen(argv[1],"rt");
-	fgets(stmp,500,in);
+	
 	int size = sizeof(stmp) ;
 		
-	while  (stmp[0]!='\0')
+	while  (fgets(stmp,500,in))
 	{
 		flag = analyse(stmp);
 //		printf("%d\n",flag);
 		if (flag)
 		{
 			memset(stmp, 0, size);
-			fgets(stmp,500,in);
 		}
 		else break;		
 	}
