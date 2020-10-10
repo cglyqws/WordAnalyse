@@ -106,6 +106,7 @@ int analyse (char *s)
 				case ' ':
 					break;
 				default :
+					printf("Unknown\n") ;
 					return 0;		
 			}	
 		}
