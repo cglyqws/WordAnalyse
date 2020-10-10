@@ -3,7 +3,7 @@
 #include<ctype.h>
 #include <stdlib.h>
 char stmp[500];
-
+char temp[500];
 int tempint;
 
 void printtoken(char *word)
@@ -40,7 +40,7 @@ void printtoken(char *word)
 int analyse (char *s)
 {
 //	printf("%s\n",s);
-	char temp[500];
+	memset(temp, 0, sizeof(temp));
 	int i,start=0,lenth=0;
 	for (i=0;s[i]!='\0'&&s[i]!='\n';i++)
 	{
@@ -115,7 +115,7 @@ int analyse (char *s)
 int flag;
 int main ()
 {
-	FILE *in = fopen("./dockerfile","rt");
+	FILE *in = fopen("my-pascal-lexer","rt");
 	fgets(stmp,500,in);
 	int size = sizeof(stmp) ;
 		
@@ -126,7 +126,7 @@ int main ()
 		if (flag)
 		{
 			memset(stmp, 0, size);
-			fgets(stmp,1025,in);
+			fgets(stmp,500,in);
 		}
 		else break;
 		
