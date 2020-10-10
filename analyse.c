@@ -67,10 +67,9 @@ int analyse (char *s)
 				i++;	
 			} 
 			temp[start] = '\0'; 
-		
 			tempint = atoi(temp);
 			printf ("Int(%d)\n",tempint);
-			
+			i--;
 		}
 		else 
 		{
@@ -122,14 +121,14 @@ int main (int argc, char *argv[])
 		
 	while  (fgets(stmp,500,in))
 	{
-		printf("%s\n",stmp);
-//		flag = analyse(stmp);
+//		printf("%s\n",stmp);
+		flag = analyse(stmp);
 
-//		if (flag)
-//		{
-//			memset(stmp, 0, size);
-//		}
-//		else break;		
+		if (flag)
+		{
+			memset(stmp, 0, size);
+		}
+		else break;		
 	}
 	
 }
